@@ -1,0 +1,11 @@
+{
+  "name": "sw-personal-page",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "images": "sh scripts/make-images.sh",
+    "prepare": "sh scripts/install-git-hooks.sh"
+  }
+}

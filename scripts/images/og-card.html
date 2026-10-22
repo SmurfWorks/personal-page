@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<title>Share image</title>
+<!-- Rendered to src/assets/og-image.jpg (1200×630) by scripts/make-images.sh -->
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=block" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    color: #2b1d12;
+    background-color: #efe3c6;
+    background-image:
+      radial-gradient(ellipse at center, transparent 50%, #e0cda2 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.24 0 0 0 0 0.12 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    font-family: "EB Garamond", serif;
+  }
+  .frame, .frame2 { position: absolute; border: 2px solid #7a5c3e; filter: url(#rough); }
+  .frame { inset: 26px; }
+  .frame2 { inset: 36px; border-width: 1px; }
+  .photo {
+    position: absolute;
+    left: 96px;
+    top: 92px;
+    width: 300px;
+    padding: 12px 12px 40px;
+    background: #fbf6ea;
+    box-shadow: 0 2px 4px rgba(60, 35, 10, 0.25), 0 18px 30px -16px rgba(60, 35, 10, 0.5);
+    transform: rotate(-4deg);
+  }
+  .photo img { display: block; width: 100%; height: 360px; object-fit: cover; object-position: 60% 20%; filter: sepia(0.35) contrast(1.05); }
+  .clip { position: absolute; top: -34px; left: 26%; width: 30px; height: 88px; transform: rotate(4deg); }
+  .text { position: absolute; left: 470px; right: 80px; top: 120px; text-align: center; }
+  .kicker { font-family: "IM Fell English SC", serif; letter-spacing: 0.28em; font-size: 22px; color: #5a4330; margin: 0; }
+  h1 { font-family: "IM Fell English SC", serif; font-weight: 400; font-size: 92px; line-height: 1; letter-spacing: 0.04em; margin: 18px 0 10px; }
+  h1 span { color: #8b2416; }
+  .alias { font-family: "IM Fell English", serif; font-style: italic; font-size: 26px; color: #5a4330; margin: 0; }
+  .alias b { font-family: "IM Fell English SC", serif; font-style: normal; font-weight: 400; color: #2b1d12; letter-spacing: 0.06em; }
+  .alias b span { color: #8b2416; }
+  .rule { width: 60%; height: 6px; margin: 26px auto; border-top: 2px solid #7a5c3e; border-bottom: 1px solid #7a5c3e; }
+  .sub { font-family: "IM Fell English", serif; font-style: italic; font-size: 32px; margin: 0; }
+  .topics { font-size: 22px; color: #5a4330; margin: 16px 0 0; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G"/></filter>
+</svg>
+<div class="frame"></div>
+<div class="frame2"></div>
+<div class="photo">
+  <img src="../../src/assets/glyn.jpg" alt="">
+  <svg class="clip" viewBox="0 0 28 84" fill="none" stroke="#8d8d88" stroke-width="2.4" stroke-linecap="round">
+    <path d="M9.5 58 L9.6 13 C9.6 7.6 13 4.4 17.6 4.4 C22.2 4.4 25.4 7.8 25.4 13.2 L25.2 66 C25.2 74.6 20 79.6 13.6 79.6 C7.2 79.6 2.6 74.6 2.6 66 L2.8 20.4"/>
+  </svg>
+</div>
+<div class="text">
+  <p class="kicker">The Practice &amp; Remedies of</p>
+  <h1>Glyn <span>Simpson</span></h1>
+  <p class="alias">otherwise known as <b>Smurf<span>Works</span></b></p>
+  <div class="rule"></div>
+  <p class="sub">Independent software developer &middot; New Zealand</p>
+  <p class="topics">Job management &amp; automation &middot; Own products &middot; Legal sector software &middot; Progressive web apps</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,1586 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glyn Simpson · Independent Software Developer, New Zealand</title>
+<meta name="description" content="Glyn Simpson (SmurfWorks): independent software developer in New Zealand. Job management software and automation, own products, and legal sector software.">
+<meta name="author" content="Glyn Simpson">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.smurfworks.com/">
+<meta name="theme-color" content="#efe3c6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="SmurfWorks">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:url" content="https://www.smurfworks.com/">
+<meta property="og:title" content="Glyn Simpson · Independent Software Developer, New Zealand">
+<meta property="og:description" content="Glyn Simpson (SmurfWorks): independent software developer in New Zealand. Job management software and automation, own products, and legal sector software.">
+<meta property="og:image" content="https://www.smurfworks.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Glyn Simpson, otherwise known as SmurfWorks: independent software developer, New Zealand">
+<meta property="profile:first_name" content="Glyn">
+<meta property="profile:last_name" content="Simpson">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Glyn Simpson · Independent Software Developer, New Zealand">
+<meta name="twitter:description" content="Glyn Simpson (SmurfWorks): independent software developer in New Zealand. Job management software and automation, own products, and legal sector software.">
+<meta name="twitter:image" content="https://www.smurfworks.com/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="Glyn Simpson, otherwise known as SmurfWorks: independent software developer, New Zealand">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Glyn Simpson",
+  "alternateName": "SmurfWorks",
+  "url": "https://www.smurfworks.com/",
+  "image": "https://www.smurfworks.com/assets/glyn.jpg",
+  "jobTitle": "Independent software developer",
+  "email": "mailto:business@smurfworks.com",
+  "address": { "@type": "PostalAddress", "addressCountry": "NZ" },
+  "sameAs": ["https://github.com/smurfworks"],
+  "knowsAbout": ["Job management software", "Workflow automation", "Product management", "Legal software", "Progressive web apps"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<script>
+  // Pick the view before the page paints: Creative (the medicine book) unless the link asks for #modern.
+  document.documentElement.classList.add('js');
+  if (location.hash === '#modern') document.documentElement.dataset.view = 'modern';
+</script>
+<style>
+  :root {
+    --paper: #efe3c6;
+    --paper-deep: #e4d3ab;
+    --label: #f6eedb;
+    --ink: #2b1d12;
+    --ink-soft: #5a4330;
+    --rubric: #8b2416;
+    --rubric-soft: #a8473a;
+    --rule: #7a5c3e;
+    --foxing: rgba(140, 92, 40, 0.10);
+    --shadow: rgba(60, 35, 10, 0.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #241a12;
+      --paper-deep: #1b130d;
+      --label: #2f2318;
+      --ink: #eadbbd;
+      --ink-soft: #bfa883;
+      --rubric: #d9734f;
+      --rubric-soft: #c98a6a;
+      --rule: #8a6d4c;
+      --foxing: rgba(0, 0, 0, 0.25);
+      --shadow: rgba(0, 0, 0, 0.45);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #241a12;
+    --paper-deep: #1b130d;
+    --label: #2f2318;
+    --ink: #eadbbd;
+    --ink-soft: #bfa883;
+    --rubric: #d9734f;
+    --rubric-soft: #c98a6a;
+    --rule: #8a6d4c;
+    --foxing: rgba(0, 0, 0, 0.25);
+    --shadow: rgba(0, 0, 0, 0.45);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 12% 18%, var(--foxing) 0 2px, transparent 3px),
+      radial-gradient(circle at 78% 64%, var(--foxing) 0 3px, transparent 4px),
+      radial-gradient(circle at 41% 87%, var(--foxing) 0 2px, transparent 3px),
+      radial-gradient(ellipse at center, transparent 55%, var(--paper-deep) 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.24 0 0 0 0 0.12 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    font-feature-settings: "liga", "dlig", "onum";
+  }
+  a { color: var(--rubric); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--ink); }
+  a:focus-visible { outline: 2px dashed var(--rubric); outline-offset: 3px; }
+
+  .book {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 2.5rem 16px 3rem;
+  }
+  /* Hand-drawn graphics: lines are drawn on their own layers and wobbled by the SVG filters */
+  .defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+  .page {
+    position: relative;
+    padding: clamp(1.5rem, 5vw, 3.5rem) clamp(1rem, 5vw, 3.5rem);
+    margin: 0 6px 3rem;
+  }
+  .page::before, .page::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border: 1.4px solid var(--rule);
+    border-radius: 2px;
+  }
+  .page::before { inset: 0; filter: url(#rough-a); }
+  .page::after { inset: -6px; border-width: 1px; filter: url(#rough-b); }
+
+  /* Title page */
+  .title-page { text-align: center; }
+  .title-page .kicker {
+    font-family: "IM Fell English SC", serif;
+    letter-spacing: 0.25em;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .title-page h1 {
+    font-family: "IM Fell English SC", serif;
+    font-weight: 400;
+    font-size: clamp(2.6rem, 10vw, 5rem);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    margin: 0.6rem 0 0.4rem;
+  }
+  .title-page h1 span { color: var(--rubric); }
+  .alias {
+    font-family: "IM Fell English", serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0 0 1rem;
+  }
+  .alias .sc { font-style: normal; font-size: 1.15em; letter-spacing: 0.08em; color: var(--ink); }
+  .alias .rubric { color: var(--rubric); }
+  .subtitle {
+    font-family: "IM Fell English", serif;
+    font-style: italic;
+    font-size: clamp(1.15rem, 3.6vw, 1.5rem);
+    margin: 0 auto;
+    max-width: 30em;
+  }
+  .being {
+    font-size: 1rem;
+    max-width: 32em;
+    margin: 1.4rem auto 0;
+    color: var(--ink-soft);
+  }
+  .being em { color: var(--ink); }
+  .emblem {
+    width: 132px;
+    height: 132px;
+    margin: 1.8rem auto 1.2rem;
+    display: block;
+    color: var(--rubric);
+    overflow: visible;
+    transform: rotate(-8deg);
+    mix-blend-mode: multiply;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .emblem { mix-blend-mode: normal; } }
+  :root[data-theme="dark"] .emblem { mix-blend-mode: normal; }
+  @media (prefers-reduced-motion: no-preference) {
+    .emblem { animation: stamp 0.55s cubic-bezier(0.3, 0, 0.4, 1) 0.5s both; }
+  }
+  @keyframes stamp {
+    0% { opacity: 0; transform: rotate(-8deg) scale(1.7); }
+    65% { opacity: 0.95; transform: rotate(-8deg) scale(0.95); }
+    100% { opacity: 0.95; transform: rotate(-8deg) scale(1); }
+  }
+  .imprint {
+    font-family: "IM Fell English SC", serif;
+    letter-spacing: 0.18em;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  .imprint-year { display: block; margin-top: 0.2rem; color: var(--ink-soft); }
+
+  /* Portrait: a photograph clipped onto the title page */
+  .portrait {
+    position: relative;
+    width: min(11rem, 46vw);
+    margin: 0.4rem auto 1.8rem;
+    padding: 9px 9px 30px;
+    background: #fbf6ea;
+    box-shadow: 0 1px 2px var(--shadow), 0 10px 22px -12px var(--shadow);
+    transform: rotate(-3.5deg);
+  }
+  .portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: sepia(0.35) contrast(1.05) brightness(1.02);
+  }
+  .paperclip {
+    position: absolute;
+    top: -26px;
+    left: 22%;
+    width: 22px;
+    height: 66px;
+    transform: rotate(4deg);
+    filter: drop-shadow(1px 2px 1px rgba(40, 25, 10, 0.35));
+  }
+  .paperclip path { stroke: #8d8d88; stroke-width: 2.4; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .portrait { background: #e9e1cf; }
+  }
+  :root[data-theme="dark"] .portrait { background: #e9e1cf; }
+
+  /* Ornaments */
+  .fleuron {
+    display: block;
+    width: min(220px, 70%);
+    height: 28px;
+    margin: 2rem auto;
+    color: var(--rule);
+    overflow: visible;
+  }
+  .double-rule {
+    border: 0;
+    height: 12px;
+    background:
+      linear-gradient(var(--rule), var(--rule)) 0 3px / 100% 1.6px no-repeat,
+      linear-gradient(var(--rule), var(--rule)) 2% 8px / 97% 1px no-repeat;
+    margin: 1.3rem auto;
+    width: 60%;
+    filter: url(#rough-a);
+  }
+
+  /* Contents */
+  .contents h2, .chapter h2 {
+    font-family: "IM Fell English SC", serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+  .contents h2 { font-size: 1.6rem; }
+  .contents ol { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+  .contents li { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.2rem 0; }
+  .contents .num { font-family: "IM Fell English SC", serif; color: var(--rubric); min-width: 2.6rem; }
+  .contents a { color: var(--ink); text-decoration: none; }
+  .contents a:hover { color: var(--rubric); }
+  .contents .dots { flex: 1; height: 0.8em; border-bottom: 1.2px dotted var(--rule); transform: translateY(-0.3em); min-width: 1rem; filter: url(#rough-b); }
+  .contents .pg { font-style: italic; color: var(--ink-soft); }
+
+  /* Chapters */
+  .chapter { margin-bottom: 3rem; }
+  .chapter .chapter-dates {
+    text-align: center;
+    font-family: "IM Fell English", serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0.3rem 0 0;
+    font-feature-settings: "lnum";
+  }
+  .chapter-num {
+    display: block;
+    text-align: center;
+    font-family: "IM Fell English SC", serif;
+    color: var(--rubric);
+    letter-spacing: 0.3em;
+    font-size: 0.95rem;
+  }
+  .chapter h2 { font-size: clamp(1.6rem, 5vw, 2.2rem); line-height: 1.2; margin-top: 0.3rem; }
+  .chapter .argument {
+    text-align: center;
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 34em;
+    margin: 0.8rem auto 1.8rem;
+    font-size: 1.02rem;
+  }
+  .chapter p { margin: 0 0 1rem; text-align: justify; hyphens: auto; }
+  .chapter p + p { text-indent: 1.5em; }
+  .dropcap::first-letter {
+    font-family: "IM Fell English", serif;
+    float: left;
+    font-size: 4.1em;
+    line-height: 0.82;
+    padding: 0.08em 0.1em 0 0;
+    color: var(--rubric);
+  }
+  .sc { font-family: "IM Fell English SC", serif; letter-spacing: 0.04em; }
+
+  .remedies {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: grid;
+    gap: 0.6rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  .remedies li { padding-left: 1.6rem; position: relative; }
+  .remedies li::before {
+    content: "℞";
+    position: absolute;
+    left: 0;
+    color: var(--rubric);
+    font-family: "IM Fell English", serif;
+  }
+
+  .case-note {
+    position: relative;
+    display: flow-root;
+    text-indent: 0 !important;
+    padding: 0.6rem 0 0.6rem 1.2rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+  }
+  .case-note::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    border-left: 1.4px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    filter: url(#rough-a);
+  }
+  .case-note strong { font-style: normal; font-family: "IM Fell English SC", serif; color: var(--rubric); font-weight: 400; letter-spacing: 0.05em; }
+
+  /* Materia medica: apothecary labels */
+  .labels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+    gap: 1.6rem;
+    margin-top: 2rem;
+  }
+  .label {
+    position: relative;
+    isolation: isolate;
+    padding: 1.3rem 1.2rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .label::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--label);
+    border: 1.4px solid var(--rule);
+    border-radius: 3px;
+    box-shadow: 0 6px 14px -8px var(--shadow);
+    filter: url(#rough-a);
+  }
+  .label::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    pointer-events: none;
+    opacity: 0.7;
+    filter: url(#rough-b);
+  }
+  .label .no {
+    font-family: "IM Fell English SC", serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--ink-soft);
+  }
+  .label h3 {
+    font-family: "IM Fell English SC", serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: 0.08em;
+    margin: 0.2rem 0 0;
+    line-height: 1.1;
+  }
+  .label .latin {
+    font-family: "IM Fell English", serif;
+    font-style: italic;
+    color: var(--rubric);
+    font-size: 1rem;
+    margin: 0.1rem 0 0.6rem;
+  }
+  .label .rule {
+    border: 0;
+    height: 8px;
+    background: linear-gradient(var(--rule), var(--rule)) 0 3px / 100% 1.2px no-repeat;
+    width: 40%;
+    margin: 0 auto 0.6rem;
+    filter: url(#rough-b);
+  }
+  .label dl { margin: 0; text-align: left; font-size: 1rem; line-height: 1.45; flex: 1; }
+  .label dt {
+    font-family: "IM Fell English SC", serif;
+    color: var(--rubric);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    margin-top: 0.5rem;
+  }
+  .label dd { margin: 0; }
+  .label .caution { font-style: italic; color: var(--ink-soft); font-size: 0.92rem; margin-top: 0.6rem; text-align: left; }
+  .label .links {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.2rem;
+    margin-top: 1rem;
+    padding-top: 0.7rem;
+    font-family: "IM Fell English SC", serif;
+    letter-spacing: 0.06em;
+    font-size: 0.95rem;
+  }
+  .label .links::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    border-bottom: 1.2px dotted var(--rule);
+    filter: url(#rough-b);
+  }
+  .label .stamp {
+    position: absolute;
+    top: 0.9rem;
+    right: -0.3rem;
+    transform: rotate(9deg);
+    font-family: "IM Fell English SC", serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--rubric);
+    border: 2px solid var(--rubric);
+    padding: 0.05rem 0.45rem;
+    border-radius: 2px;
+    opacity: 0.8;
+    background: var(--label);
+    filter: url(#rough-b);
+  }
+  .label.retired { opacity: 0.85; }
+  .label.retired h3 { text-decoration: line-through; text-decoration-thickness: 1px; text-decoration-color: var(--rubric-soft); }
+
+  /* Colophon */
+  footer {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  footer p { margin: 0; }
+  footer .finis {
+    font-family: "IM Fell English SC", serif;
+    letter-spacing: 0.4em;
+    font-size: 1.2rem;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+
+  @media (max-width: 560px) {
+    body { font-size: 1.06rem; }
+    .chapter p { text-align: left; }
+    .page { margin: 0 6px 2rem; }
+    .contents .pg { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* Figures set into the text, as plates in an old medical book */
+  .chapter::after { content: ""; display: table; clear: both; }
+  .plate {
+    position: relative;
+    width: 12.5rem;
+    margin: 0.4rem 0 1rem;
+    padding: 0.8rem 0.8rem 0.6rem;
+    text-align: center;
+  }
+  .plate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--rule);
+    pointer-events: none;
+    filter: url(#rough-b);
+  }
+  .plate.right { float: right; margin-left: 1.6rem; }
+  .plate.left { float: left; margin-right: 1.6rem; }
+  .plate.centre { margin: 0 auto 1.5rem; }
+  .vignette { display: block; width: 100%; height: auto; color: var(--ink-soft); overflow: visible; filter: url(#rough-b); }
+  .vignette .accent { stroke: var(--rubric); }
+  .plate figcaption {
+    font-style: italic;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    color: var(--ink-soft);
+    margin-top: 0.5rem;
+  }
+  .plate figcaption .sc { font-style: normal; color: var(--rubric); }
+  @media (max-width: 560px) {
+    .plate { width: 9rem; padding: 0.5rem 0.5rem 0.4rem; }
+    .plate.right { margin-left: 1rem; }
+    .plate.left { margin-right: 1rem; }
+    .plate figcaption { font-size: 0.78rem; }
+  }
+  @media (max-width: 420px) {
+    .plate.left, .plate.right { float: none; margin: 0.5rem auto 1.2rem; width: 11rem; }
+  }
+
+  /* Figures drawn in, stroke by stroke, as they come into view */
+  .drawing .sketch path { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.9s ease-in-out; }
+  .drawing .sketch.drawn path { stroke-dashoffset: 0; }
+  .drawing .sketch.resetting path { transition: none; }
+
+  /* Page-turn buttons between sections (Creative view only) */
+  .page-turn {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: -1.2rem 6px 2.4rem;
+  }
+  .page-turn button {
+    font: inherit;
+    font-family: "IM Fell English SC", serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    color: var(--rubric);
+    background: none;
+    border: 0;
+    padding: 0.3rem 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    max-width: 48%;
+  }
+  .page-turn .next { margin-left: auto; text-align: right; align-items: flex-end; }
+  .page-turn .prev { align-items: flex-start; text-align: left; }
+  .page-turn .turn {
+    border-bottom: 1px dotted var(--rubric-soft);
+    padding-bottom: 1px;
+  }
+  .page-turn .to {
+    font-family: "IM Fell English", serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0;
+    color: var(--ink-soft);
+  }
+  .page-turn button:hover .turn { color: var(--ink); border-bottom-style: solid; }
+  .page-turn button:focus-visible { outline: 2px dashed var(--rubric); outline-offset: 4px; }
+  .paged .leaf-current + .page-turn { display: flex; }
+
+  /* One page at a time, centred in the window */
+  .paged .book {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+  .paged .leaf-current { margin-top: auto; }
+  .paged .leaf-current + .page-turn { margin-bottom: auto; }
+  .paged main { display: contents; }
+  .paged .leaf:not(.leaf-current),
+  .paged .fleuron { display: none; }
+  .paged .chapter {
+    display: flow-root;
+    position: relative;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    margin: 0 6px 3rem;
+  }
+  .paged .chapter::before,
+  .paged .chapter::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border: 1.4px solid var(--rule);
+    border-radius: 2px;
+  }
+  .paged .chapter::after { display: block; inset: 0; filter: url(#rough-a); }
+  .paged .chapter::before { inset: -6px; border-width: 1px; filter: url(#rough-b); }
+
+  /* Turning a page: the current page slides out and the next slides in.
+     Forward slides leftwards; turning back slides rightwards. */
+  .paged body { overflow-x: clip; }
+  .slide-out-left { animation: slide-out-left 0.38s cubic-bezier(0.55, 0, 0.8, 0.4) both; }
+  .slide-out-right { animation: slide-out-right 0.38s cubic-bezier(0.55, 0, 0.8, 0.4) both; }
+  .slide-in-left { animation: slide-in-left 0.5s cubic-bezier(0.15, 0.7, 0.25, 1) both; }
+  .slide-in-right { animation: slide-in-right 0.5s cubic-bezier(0.15, 0.7, 0.25, 1) both; }
+  @keyframes slide-out-left { to { transform: translateX(-100vw) rotate(-1.5deg); } }
+  @keyframes slide-out-right { to { transform: translateX(100vw) rotate(1.5deg); } }
+  @keyframes slide-in-left { from { transform: translateX(100vw) rotate(1.5deg); } }
+  @keyframes slide-in-right { from { transform: translateX(-100vw) rotate(-1.5deg); } }
+
+  /* View toolbar: slides down once the page has loaded */
+  .viewbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.55rem 16px;
+    background: var(--label);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 4px 14px -10px var(--shadow);
+    font-family: "IM Fell English SC", serif;
+    transform: translateY(-110%);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .js .viewbar { display: flex; }
+  .viewbar.shown { transform: none; }
+  .js .book { padding-top: calc(2.5rem + 3.2rem); }
+  html.js { scroll-padding-top: 4.5rem; }
+  .viewbar-name { letter-spacing: 0.1em; font-size: 1rem; white-space: nowrap; }
+  .viewbar-switch {
+    display: inline-flex;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 2px;
+    background: var(--paper);
+  }
+  .viewbar-switch button {
+    font: inherit;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .viewbar-switch button[aria-pressed="true"] { background: var(--rubric); color: var(--label); }
+  .viewbar-switch button:focus-visible { outline: 2px solid var(--rubric); outline-offset: 2px; }
+  @media (max-width: 420px) {
+    .viewbar-name { display: none; }
+    .viewbar { justify-content: center; }
+  }
+  @media (prefers-reduced-motion: reduce) { .viewbar { transition: none; } }
+
+  /* Wording that differs between the two views */
+  .modern-only, .modern-summary { display: none; }
+  [data-view="modern"] .book-only { display: none; }
+  [data-view="modern"] .modern-only { display: inline; }
+  [data-view="modern"] .modern-summary { display: block; }
+
+  /* Modern view: the same content, plainly and professionally set */
+  [data-view="modern"] {
+    --m-bg: #f5f6f8;
+    --m-surface: #ffffff;
+    --m-text: #1c2026;
+    --m-muted: #5b6472;
+    --m-border: #e1e4ea;
+    --m-accent: #2f5bd3;
+    --m-accent-soft: #eef2fd;
+    scroll-padding-top: 4rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root[data-view="modern"]:not([data-theme="light"]) {
+      --m-bg: #0f1115;
+      --m-surface: #171a20;
+      --m-text: #e8eaee;
+      --m-muted: #9aa3b2;
+      --m-border: #2a2f38;
+      --m-accent: #7c9cf5;
+      --m-accent-soft: #1c2436;
+    }
+  }
+  :root[data-view="modern"][data-theme="dark"] {
+    --m-bg: #0f1115;
+    --m-surface: #171a20;
+    --m-text: #e8eaee;
+    --m-muted: #9aa3b2;
+    --m-border: #2a2f38;
+    --m-accent: #7c9cf5;
+    --m-accent-soft: #1c2436;
+  }
+  [data-view="modern"] body {
+    background: var(--m-bg);
+    color: var(--m-text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    font-feature-settings: normal;
+  }
+  [data-view="modern"] :is(h1, h2, h3, dt, .sc, .links, .alias, .subtitle, .case-note strong, .viewbar, footer .finis) {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+  [data-view="modern"] a { color: var(--m-accent); }
+  [data-view="modern"] a:hover { color: var(--m-text); }
+  [data-view="modern"] .viewbar {
+    background: color-mix(in srgb, var(--m-surface) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom-color: var(--m-border);
+    box-shadow: none;
+  }
+  [data-view="modern"] .viewbar-name { font-weight: 600; font-size: 0.95rem; }
+  [data-view="modern"] .viewbar-switch { background: var(--m-bg); border-color: var(--m-border); }
+  [data-view="modern"] .viewbar-switch button { color: var(--m-muted); font-size: 0.85rem; font-weight: 500; letter-spacing: normal; }
+  [data-view="modern"] .viewbar-switch button[aria-pressed="true"] { background: var(--m-surface); color: var(--m-text); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+  [data-view="modern"] .viewbar-switch button:focus-visible { outline-color: var(--m-accent); }
+
+  [data-view="modern"] .book { max-width: 48rem; }
+  [data-view="modern"] .page,
+  [data-view="modern"] .chapter {
+    background: var(--m-surface);
+    border: 1px solid var(--m-border);
+    border-radius: 14px;
+    padding: clamp(1.4rem, 4vw, 2.5rem);
+    margin: 0 0 1.25rem;
+  }
+  [data-view="modern"] .page::before,
+  [data-view="modern"] .page::after,
+  [data-view="modern"] .fleuron,
+  [data-view="modern"] .plate,
+  [data-view="modern"] .contents,
+  [data-view="modern"] .kicker,
+  [data-view="modern"] .double-rule,
+  [data-view="modern"] .emblem,
+  [data-view="modern"] .imprint,
+  [data-view="modern"] .title-page .being:not(.modern-summary),
+  [data-view="modern"] .chapter-num,
+  [data-view="modern"] .chapter .argument,
+  [data-view="modern"] .label .no,
+  [data-view="modern"] .label .latin,
+  [data-view="modern"] .label .rule,
+  [data-view="modern"] footer .finis { display: none; }
+
+  [data-view="modern"] .title-page { text-align: left; }
+  [data-view="modern"] .portrait {
+    width: 7rem;
+    margin: 0 0 1.2rem;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    transform: none;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  [data-view="modern"] .portrait img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% 0%;
+    transform: scale(1.2);
+    transform-origin: 60% 8%;
+    filter: none;
+  }
+  [data-view="modern"] .paperclip { display: none; }
+  [data-view="modern"] .title-page h1 { font-size: clamp(2.1rem, 6vw, 2.9rem); font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+  [data-view="modern"] .title-page h1 span { color: inherit; }
+  [data-view="modern"] .alias { color: var(--m-muted); margin: 0.3rem 0 0; font-size: 0.95rem; }
+  [data-view="modern"] .alias .sc { font-size: 1em; color: var(--m-text); font-weight: 600; }
+  [data-view="modern"] .alias .rubric { color: inherit; }
+  [data-view="modern"] .subtitle { font-size: 1.1rem; font-weight: 500; margin: 1rem 0 0; max-width: none; color: var(--m-accent); }
+  [data-view="modern"] .title-page .being { margin: 0.8rem 0 0; max-width: 40em; color: var(--m-muted); font-size: 1rem; }
+
+  [data-view="modern"] .chapter h2 { text-align: left; font-size: 1.4rem; font-weight: 650; line-height: 1.3; margin: 0 0 0.9rem; }
+  [data-view="modern"] .chapter .chapter-dates {
+    text-align: left;
+    font-family: inherit;
+    font-style: normal;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--m-muted);
+    margin: -0.7rem 0 1.1rem;
+  }
+  [data-view="modern"] .chapter p { text-align: left; hyphens: manual; }
+  [data-view="modern"] .chapter > :last-child { margin-bottom: 0; }
+  [data-view="modern"] .chapter p + p { text-indent: 0; }
+  [data-view="modern"] .dropcap::first-letter {
+    float: none;
+    font: inherit;
+    padding: 0;
+    color: inherit;
+    line-height: inherit;
+  }
+  [data-view="modern"] .remedies { gap: 0.4rem 1.5rem; margin: 1.2rem 0 0; }
+  [data-view="modern"] .remedies li { padding-left: 1.3rem; }
+  [data-view="modern"] .remedies li::before {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--m-accent);
+    top: 0.6em;
+  }
+  [data-view="modern"] .case-note {
+    font-style: normal;
+    background: var(--m-accent-soft);
+    border-left: 3px solid var(--m-accent);
+    border-radius: 0 8px 8px 0;
+    padding: 0.8rem 1rem;
+  }
+  [data-view="modern"] .case-note::before { display: none; }
+  [data-view="modern"] .case-note strong { color: var(--m-accent); font-weight: 600; }
+
+  [data-view="modern"] .labels { gap: 1rem; margin-top: 1.2rem; }
+  [data-view="modern"] .label { text-align: left; padding: 1.1rem 1.2rem 1rem; }
+  [data-view="modern"] .label::before { display: none; }
+  [data-view="modern"] .label::after {
+    background: var(--m-bg);
+    border: 1px solid var(--m-border);
+    border-radius: 10px;
+    box-shadow: none;
+    filter: none;
+  }
+  [data-view="modern"] .label h3 { font-size: 1.15rem; font-weight: 600; margin: 0 0 0.6rem; }
+  [data-view="modern"] .label dl { font-size: 0.93rem; }
+  [data-view="modern"] .label dt {
+    color: var(--m-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.6rem;
+  }
+  [data-view="modern"] .label .caution { color: var(--m-muted); font-style: normal; font-size: 0.85rem; }
+  [data-view="modern"] .label .links { justify-content: flex-start; font-size: 0.9rem; font-weight: 500; border-top: 1px solid var(--m-border); }
+  [data-view="modern"] .label .links::before { display: none; }
+  [data-view="modern"] .label .links a { text-decoration: none; }
+  [data-view="modern"] .label .links a:hover { text-decoration: underline; }
+  [data-view="modern"] .label .stamp { filter: none; transform: none; font-family: inherit; font-size: 0.7rem; }
+
+  [data-view="modern"] footer { color: var(--m-muted); font-size: 0.9rem; }
+
+  /* Paragraphs written in as they come into view (see script at the end) */
+  .writing .ch { color: transparent; transition: color 0.4s ease-out; }
+  .writing .ch.on { color: inherit; }
+  .writing a { text-decoration-color: transparent; }
+  .dropcap.writing::first-letter { color: transparent; }
+  .dropcap.writing.inked::first-letter { color: var(--rubric); }
+  .remedies li.writing::before { opacity: 0; transition: opacity 0.4s; }
+  .remedies li.writing.inked::before { opacity: 1; }
+  @media print {
+    body { background: #fff; }
+    .page { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<svg class="defs" aria-hidden="true" focusable="false">
+  <filter id="rough-a" x="-3%" y="-30%" width="106%" height="160%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="3" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="rough-b" x="-3%" y="-30%" width="106%" height="160%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="11" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <symbol id="fleuron" viewBox="0 0 200 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 12.4 C44 11.6 60 4.6 79 9.6 C87 12 89.6 15.4 93.6 12.2"/>
+      <path d="M178 11.6 C156 12.6 140 4.4 121 9.8 C113 12.2 110.4 15.2 106.4 11.8"/>
+      <path d="M79 9.6 C77.6 15.6 71.4 15.4 71.8 11.2 C72.2 8.8 75.2 9.2 75 11"/>
+      <path d="M121 9.8 C122.6 15.4 128.6 15.6 128.2 11.4 C127.8 9 124.8 9.4 125 11.2"/>
+      <path d="M100 2.6 C106.4 7.6 106 16.4 100.2 21.4 C93.8 16.2 94.2 7.8 100.4 3"/>
+      <path d="M100 6.4 L100.2 18" stroke-width="0.8"/>
+      <path d="M52 9.4 C55 5 60 4.6 62 6.6 M148 9.2 C145 5.2 140 4.4 138 6.8" stroke-width="0.9"/>
+    </g>
+    <g fill="currentColor">
+      <path d="M13 10.8 C15.4 10.2 16.6 13 14.6 13.8 C12.4 14.4 11.2 11.6 13 10.8 Z"/>
+      <path d="M186.6 10.4 C189 10.4 189.4 13.4 187.2 13.8 C185 14 184.6 10.8 186.6 10.4 Z"/>
+    </g>
+  </symbol>
+</svg>
+<nav class="viewbar" aria-label="Page style">
+  <span class="viewbar-name">Glyn Simpson</span>
+  <div class="viewbar-switch" role="group" aria-label="Choose how this page looks">
+    <button type="button" data-set-view="creative" aria-pressed="true">Creative</button>
+    <button type="button" data-set-view="modern" aria-pressed="false">Modern</button>
+  </div>
+</nav>
+<div class="book">
+
+  <header class="page title-page">
+    <figure class="portrait">
+      <img src="assets/glyn.jpg" width="675" height="900" alt="Glyn Simpson in a cap and sunglasses, with a long beard">
+      <svg class="paperclip" viewBox="0 0 28 84" aria-hidden="true" focusable="false" fill="none" stroke-linecap="round">
+        <path d="M9.5 58 L9.6 13 C9.6 7.6 13 4.4 17.6 4.4 C22.2 4.4 25.4 7.8 25.4 13.2 L25.2 66 C25.2 74.6 20 79.6 13.6 79.6 C7.2 79.6 2.6 74.6 2.6 66 L2.8 20.4"/>
+      </svg>
+    </figure>
+    <p class="kicker">The Practice &amp; Remedies of</p>
+    <h1>Glyn <span>Simpson</span></h1>
+    <p class="alias"><span class="book-only">otherwise known as</span><span class="modern-only">working as</span> <span class="sc">Smurf<span class="rubric">Works</span></span></p>
+    <p class="subtitle"><span class="book-only">Software, Systems &amp; Sundry Applications for the Working Day</span><span class="modern-only">Independent software developer &middot; New Zealand</span></p>
+    <hr class="double-rule">
+    <p class="being">
+      <em>Being</em> an account of one developer&rsquo;s independent contracting; of the building and
+      superintendence of job management software and automation; of many years building
+      solutions for the New Zealand legal profession and public alike; of time served in agencies; and a catalogue
+      of small progressive web applications, each made to answer the author&rsquo;s own requirements.
+    </p>
+    <p class="being modern-summary">
+      Glyn is an independent software developer and contractor in New Zealand, focused on job management
+      software and automation. That work draws on building products of Glyn&rsquo;s own since 2022, seven years
+      of software for the New Zealand legal profession and public, and five years in agencies.
+    </p>
+    <svg class="emblem" viewBox="0 0 120 120" role="img" aria-label="A stamp reading GS over SW, for Glyn Simpson and SmurfWorks">
+      <defs>
+        <filter id="stamp-ink" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="5" result="warp"/>
+          <feDisplacementMap in="SourceGraphic" in2="warp" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" seed="2" result="grain"/>
+          <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.8" result="speckle"/>
+          <feComposite in="rough" in2="speckle" operator="in"/>
+        </filter>
+        <path id="stamp-ring" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/>
+      </defs>
+      <g filter="url(#stamp-ink)" fill="none" stroke="currentColor">
+        <circle cx="60" cy="60" r="56" stroke-width="2.8"/>
+        <circle cx="60" cy="60" r="51.5" stroke-width="1"/>
+        <circle cx="60" cy="60" r="36.5" stroke-width="1.2"/>
+        <text fill="currentColor" stroke="none" font-family="'IM Fell English SC', serif" font-size="9" letter-spacing="2.55">
+          <textPath href="#stamp-ring" startOffset="0">GLYN SIMPSON &#x2726; SMURFWORKS &#x2726; N.Z. &#x2726;</textPath>
+        </text>
+        <text x="60" y="56" text-anchor="middle" fill="currentColor" stroke="none" font-family="'IM Fell English SC', serif" font-size="24" letter-spacing="1">GS</text>
+        <path d="M38 62.4 C46 61.4 54 62.8 60 61.8 C66 61 74 62.6 82 61.8" stroke-width="1.4" stroke-linecap="round"/>
+        <circle cx="34.5" cy="62" r="1.3" fill="currentColor" stroke="none"/>
+        <circle cx="85.5" cy="62" r="1.3" fill="currentColor" stroke="none"/>
+        <text x="60" y="83" text-anchor="middle" fill="currentColor" stroke="none" font-family="'IM Fell English SC', serif" font-size="24" letter-spacing="1">SW</text>
+      </g>
+    </svg>
+    <p class="imprint">Made in New Zealand
+      <span class="imprint-year">MMXXVI</span>
+    </p>
+  </header>
+
+  <nav class="page contents" aria-labelledby="contents-title">
+    <h2 id="contents-title">Contents</h2>
+    <ol>
+      <li><span class="num">I.</span><a href="#practitioner">Of the Practitioner, Glyn Simpson</a><span class="dots"></span><span class="pg">independent contracting</span></li>
+      <li><span class="num">II.</span><a href="#job-management">On Job Management &amp; Automation</a><span class="dots"></span><span class="pg">2024 &ndash; present</span></li>
+      <li><span class="num">III.</span><a href="#own-products">Of Remedies of One&rsquo;s Own Devising</a><span class="dots"></span><span class="pg">2022 &ndash; present</span></li>
+      <li><span class="num">IV.</span><a href="#legal">A Case History</a><span class="dots"></span><span class="pg">2015 &ndash; 2022</span></li>
+      <li><span class="num">V.</span><a href="#agencies">Of Service in the Agencies</a><span class="dots"></span><span class="pg">2010 &ndash; 2015</span></li>
+      <li><span class="num">VI.</span><a href="#materia-medica">Materia Medica</a><span class="dots"></span><span class="pg">the applications</span></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section class="chapter" id="practitioner" aria-labelledby="ch1">
+      <span class="chapter-num">Chapter I</span>
+      <h2 id="ch1"><span class="book-only">Of the Practitioner</span><span class="modern-only">About Glyn</span></h2>
+      <p class="argument">Wherein the practitioner is introduced, the name SmurfWorks explained, and the manner of engagement set down.</p>
+      <figure class="plate right">
+        <svg class="vignette" viewBox="0 0 120 90" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M38 60 C37 70 38 77 40 82 C52 84.5 68 84.2 80 82 C82.4 77 83 70 82 60.4 C70 57 50 57.2 38.4 60"/>
+          <path d="M50 58 C50 54.6 51 52.4 52 51 C57 50 63 50.2 68 51 C69 52.2 70 54.4 70.2 58"/>
+          <path d="M51 51.2 C55 49 65 49.2 69 51"/>
+          <path d="M72 62 L75.6 80.4 M75.6 61.4 L79 79 M78.8 61.6 L81.4 75.6 M40 66 L41 78" stroke-width="0.7"/>
+          <path d="M44 66 C50 64.6 70 64.4 76 66 L76.4 75.6 C70 77 50 77 44.4 75.4 Z" stroke-width="0.9"/>
+          <path d="M28 85.6 C50 87.4 75 86.6 94 84.4"/>
+          <path d="M60 54 C70 38 86 20 104 5"/>
+          <path d="M63.6 47.6 C60 34 72 16 98.4 6 L104 5"/>
+          <path d="M70 42 C82 38.4 96 24 104 5"/>
+          <path d="M72 36 L67.6 29.6 M78 28.6 L74 21.4 M84 22.4 L81 15.4 M90 16.4 L88 10.4 M75.6 34 L82 32 M81.6 27.6 L89 24 M88 20.6 L95 16.4 M93.6 13.6 L99.4 10.6" stroke-width="0.7"/>
+          <path class="accent" d="M59.6 54.4 C59 56.4 60.4 58.6 61.6 56.6 C62 55.4 60.8 54.4 59.6 54.4"/>
+          <path class="accent" d="M18 84 C21 81.6 24 81.8 26 84 M96 84.6 C98 83 101 83 103 84.4" stroke-width="0.9"/>
+        </svg>
+        <figcaption><span class="sc">Fig. I.</span> A quill resting in an inkwell.</figcaption>
+      </figure>
+      <p class="dropcap">Glyn Simpson is an independent software developer and contractor in New Zealand; SmurfWorks is simply the name the work goes by. Glyn takes on engagements directly with the businesses that need the work done, and alongside agencies that need an extra pair of experienced hands. Each engagement begins as a good physician's would: by listening, examining how the work is really done, and only then prescribing.</p>
+      <p>The remedies are practical. Sometimes that means building new software, sometimes connecting the systems already in place so they share their information properly, and sometimes standing beside a team as its product is planned, built and put to use, keeping the course true from first sketch to daily routine.</p>
+    </section>
+
+    <svg class="fleuron" aria-hidden="true" focusable="false"><use href="#fleuron"/></svg>
+
+    <section class="chapter" id="job-management" aria-labelledby="ch2">
+      <span class="chapter-num">Chapter II</span>
+      <h2 id="ch2"><span class="book-only">On Job Management &amp; Automation</span><span class="modern-only">Job Management &amp; Automation</span></h2>
+      <p class="chapter-dates">2024 to the present day</p>
+      <p class="argument">Of the developing and providing of solutions, and of the oversight of products, for those whose business is the doing of jobs.</p>
+      <p class="dropcap">Much of Glyn&rsquo;s present work concerns job management software: the systems that carry a piece of work from first enquiry, through quoting, scheduling and doing, to invoicing and record. Glyn develops and provides these solutions and holds product oversight of them, deciding what is built, in what order, and to what standard, so the software keeps pace with the trade it serves.</p>
+      <figure class="plate left">
+        <svg class="vignette" viewBox="0 0 120 90" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M67.8 43.6 L73.8 47.9 L72.7 52.5 L65.1 54.0 L63.2 56.9 L65.3 63.3 L62.4 67.0 L55.5 63.3 L53.0 65.5 L50.5 71.5 L46.6 71.5 L43.0 65.5 L38.8 64.5 L33.1 69.3 L29.2 66.8 L30.6 59.4 L28.3 56.4 L20.5 56.4 L19.6 52.6 L24.0 47.5 L23.9 43.8 L18.7 39.9 L19.1 35.4 L26.4 34.5 L28.5 30.8 L26.8 23.7 L29.4 21.7 L35.6 24.4 L38.6 23.3 L41.9 16.4 L46.5 15.8 L49.7 22.4 L52.9 23.0 L59.1 19.6 L62.4 21.5 L61.0 28.7 L64.0 31.7 L71.3 31.0 L72.5 35.5 L67.2 40.5 L67.6 43.5 Z"/>
+          <path d="M48.4 37.8 Q51.4 39.3 52.6 42.4 Q52.6 45.7 51.2 48.6 Q48.5 50.8 45.2 50.7 Q42.0 49.7 39.8 47.3 Q38.7 44.0 39.6 40.6 Q41.9 38.0 45.2 37.2 Q48.4 37.5 51.1 39.4"/>
+          <path d="M52.1 28.4 Q57.6 33.8 61.1 40.4 Q61.1 47.8 57.6 54.4 Q51.6 59.0 44.0 60.0 Q37.1 56.8 32.5 51.0 Q30.1 44.0 32.0 36.7 Q36.8 30.8 43.9 27.4 Q51.7 28.7 58.0 33.3" stroke-width="0.8"/>
+          <path d="M46 37 L46 28.4 M53 44 L61.6 44 M46 51 L46 59.6 M39 44 L30.4 44" stroke-width="1.1"/>
+          <path class="accent" d="M97.9 62.2 L102.0 67.7 L100.2 71.0 L93.7 69.8 L91.3 71.8 L90.7 77.1 L87.3 78.2 L83.8 73.5 L80.6 73.3 L76.2 77.4 L72.8 76.2 L74.2 69.4 L72.0 67.6 L66.3 66.8 L65.8 64.2 L70.0 59.9 L69.8 56.7 L66.3 52.4 L68.6 49.0 L73.6 50.6 L76.3 47.9 L76.8 41.9 L80.4 41.9 L84.5 46.2 L86.5 46.1 L90.9 42.8 L94.7 44.6 L93.7 49.8 L96.0 52.8 L102.0 53.2 L103.0 56.6 L97.7 60.1 L97.5 62.2 Z"/>
+          <path class="accent" d="M85.6 55.9 Q87.4 57.0 88.4 59.0 Q88.5 61.1 87.6 63.2 Q85.6 64.3 83.4 64.8 Q81.3 64.0 79.7 62.2 Q79.5 60.0 80.0 57.9 Q81.5 56.3 83.5 55.6 Q85.6 55.8 87.5 56.9"/>
+          <path d="M30 74 L36 70 M33 77 L42 71 M38 79 L48 72" stroke-width="0.7"/>
+          <path d="M12 86 C40 88 80 87.4 108 85.6"/>
+        </svg>
+        <figcaption><span class="sc">Fig. II.</span> Two interlocking cogs.</figcaption>
+      </figure>
+      <p>Alongside sits the patient work of automation: removing the copying, re-keying and chasing that quietly consume a working week, so that people may attend to the work only they can do.</p>
+      <ul class="remedies">
+        <li>Job management systems, designed and developed</li>
+        <li>Product oversight: roadmap, priorities, and quality</li>
+        <li>Workflow automation and system integrations</li>
+        <li>Independent contracting, direct or via agencies</li>
+      </ul>
+    </section>
+
+    <svg class="fleuron" aria-hidden="true" focusable="false"><use href="#fleuron"/></svg>
+
+    <section class="chapter" id="own-products" aria-labelledby="ch3">
+      <span class="chapter-num">Chapter III</span>
+      <h2 id="ch3"><span class="book-only">Of Remedies of One&rsquo;s Own Devising</span><span class="modern-only">Own Products</span></h2>
+      <p class="chapter-dates">2022 to the present day</p>
+      <p class="argument">Wherein the practitioner, having served others, sets up a dispensary of their own and compounds products under their own name.</p>
+      <figure class="plate right">
+        <svg class="vignette" viewBox="0 0 120 90" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M26 44 C40 38.4 80 38 94 44.4 C80 50.4 40 50 26.4 44"/>
+          <path d="M27 45 C28 64 40 74 60 74.4 C80 74 92 64 93.4 45"/>
+          <path d="M46 74 C46 80 44 82 40 84 C52 86.4 68 86 80 84 C76 82 74 80 74.4 74"/>
+          <path d="M80 51 L76 68 M86 49 L83 62.4 M74 52.4 L70.4 72 M89.4 47.6 L88 55" stroke-width="0.7"/>
+          <path d="M64 44 C74 32 86 18 96 8"/>
+          <path d="M70 47 C80 35 92 21 101 12"/>
+          <path d="M96 8 C99 5.6 103.4 8.6 101 12"/>
+          <path d="M64 44 C62 47.4 66 50.6 70 47"/>
+          <path class="accent" d="M36 41 C39 36 44 36.4 44 40 C41 41.6 38 41.8 36 41 M48 39.6 C50 35.6 54 36 54.4 39" stroke-width="1"/>
+          <path d="M30 87 C50 88.6 72 88.4 92 86.6"/>
+        </svg>
+        <figcaption><span class="sc">Fig. III.</span> A mortar and pestle.</figcaption>
+      </figure>
+      <p class="dropcap">After the legal years came a turn toward Glyn&rsquo;s own products. Rather than building to another&rsquo;s prescription, Glyn set out to find problems worth solving, shape a product around each, and carry it from first idea through design, build and launch to the people it was made for. Two preparations have come from this work so far: <span class="sc">Employr</span>, for employers, and <span class="sc">We Eat Well</span>, for the kitchen.</p>
+      <p>Owning a product end to end teaches what no brief can: deciding what to leave out, weighing every feature against the time it costs, and living with the consequences of each decision long after release. That experience of owning a product, not just building it, runs alongside, and informs, the product oversight described in the chapter before.</p>
+      <div class="labels">
+        <article class="label">
+          <span class="no">Preparation the First</span>
+          <h3>Employr</h3>
+          <p class="latin">Pactum Laboris</p>
+          <hr class="rule">
+          <dl>
+            <dt><span class="book-only">Indications</span><span class="modern-only">What it does</span></dt>
+            <dd>Generating employment agreements, and managing the whole employment lifecycle for small and medium-sized businesses, from hiring onward.</dd>
+            <dt><span class="book-only">Prescribed for</span><span class="modern-only">Who it&rsquo;s for</span></dt>
+            <dd>Small and medium-sized employers.</dd>
+          </dl>
+        </article>
+
+        <article class="label">
+          <span class="no">Preparation the Second</span>
+          <h3>We Eat Well</h3>
+          <p class="latin">Liber Coquinae</p>
+          <hr class="rule">
+          <dl>
+            <dt><span class="book-only">Indications</span><span class="modern-only">What it does</span></dt>
+            <dd>Cataloguing recipes, so the meals worth making again are kept close at hand.</dd>
+            <dt><span class="book-only">Preparation</span><span class="modern-only">Built with</span></dt>
+            <dd>Mobile apps for Android and iOS.</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <svg class="fleuron" aria-hidden="true" focusable="false"><use href="#fleuron"/></svg>
+
+    <section class="chapter" id="legal" aria-labelledby="ch4">
+      <span class="chapter-num">Chapter IV</span>
+      <h2 id="ch4"><span class="book-only">A Case History: The New Zealand Legal Profession</span><span class="modern-only">Software for the NZ Legal Profession</span></h2>
+      <p class="chapter-dates">2015 &ndash; 2022</p>
+      <p class="argument">Being the record of a long course of treatment, its method, and its happy conclusion.</p>
+      <p class="dropcap">From 2015 to 2022, Glyn spent seven years building software solutions for the New Zealand legal profession and the public it serves. The law keeps exacting standards: matters must be tracked without error, time and trust accounting must balance to the cent, and every document must be exactly where it should be. Software for lawyers and their clients must be precise, dependable, and built with real understanding of how legal work is done, both inside a practice and by the people who come to it.</p>
+      <figure class="plate left">
+        <svg class="vignette" viewBox="0 0 120 90" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path class="accent" d="M61.3 7.5 Q62.7 8.6 63.6 10.1 Q63.6 11.9 62.6 13.3 Q61.3 14.4 59.5 14.7 Q57.9 14.0 56.7 12.7 Q56.4 11.0 56.9 9.4 Q57.9 8.0 59.6 7.5 Q61.3 7.5 62.8 8.5"/>
+          <path d="M60 15 C60.6 36 59.6 58 60.2 80"/>
+          <path d="M24 24.6 C40 21.4 80 21 96.4 24"/>
+          <path d="M42.4 85 C46 81 52 79.4 60 79.4 C68 79.4 74 81 77.6 85 Z"/>
+          <path d="M28 25 L18 52 M28 25 L38.4 52 M92 25 L82 46 M92 25 L102.4 46" stroke-width="0.9"/>
+          <path d="M14 52 C18 60.4 38 60 42.4 52 C34 54.2 22 54 14 52"/>
+          <path d="M78 46 C82 54.4 102 54 106.4 46 C98 48.2 86 48 78 46"/>
+          <path d="M66 83.6 L70 81.2 M70 84.4 L74 82.2 M48 84.6 L52 81.6" stroke-width="0.7"/>
+          <path d="M18 55 L24 57.6 M36 55 L30 57.8 M84 49 L90 51.4 M100 49 L94 51.6" stroke-width="0.6"/>
+          <path d="M30 88 C50 89.4 72 89 90 87.6"/>
+        </svg>
+        <figcaption><span class="sc">Fig. IV.</span> The scales of justice.</figcaption>
+      </figure>
+      <p>That work was carried through from development into a mature product relied upon by legal practitioners and members of the public, and concluded in a successful exit. The lessons of that time, on rigour, on listening closely to specialist users, and on building software that people trust with their livelihoods, inform every engagement since.</p>
+      <p class="case-note"><strong>Outcome.</strong> Solutions built for New Zealand&rsquo;s legal profession and public alike, brought to maturity, and concluded with a successful exit.</p>
+    </section>
+
+    <svg class="fleuron" aria-hidden="true" focusable="false"><use href="#fleuron"/></svg>
+
+    <section class="chapter" id="agencies" aria-labelledby="ch5">
+      <span class="chapter-num">Chapter V</span>
+      <h2 id="ch5"><span class="book-only">Of Service in the Agencies</span><span class="modern-only">Agency Experience</span></h2>
+      <p class="chapter-dates">2010 &ndash; 2015</p>
+      <p class="argument">Concerning years spent in agency practice, and what the busy ward teaches that the quiet study cannot.</p>
+      <figure class="plate right">
+        <svg class="vignette" viewBox="0 0 120 90" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M26 30 L26 22 L34 22.4 L34 30 C40 34 41 40 41.2 46 L41 80 C34 82.2 26 82 19 80.4 L19.2 46 C19 40 20 34 26 30"/>
+          <path d="M25 22 L25.4 16 L35 16.2 L34.6 22"/>
+          <path class="accent" d="M21 54 L39 54.4 L38.8 66 L21.2 65.6 Z"/>
+          <path d="M55 41 L55 31 L65 31.4 L65 41"/>
+          <path d="M54.4 30.4 L54.8 26 L65.4 26.4 L65.4 31"/>
+          <path d="M55 41 C40 44 37.6 76 50 81 C56 83.2 64 83 70 81 C82.6 76 80 44 65 41"/>
+          <path d="M44 62 C50 60 54 64 60 62 C66 60 70 64 76.4 62" stroke-width="0.9"/>
+          <path d="M72 66 L68 79 M76 66 L73 77.6 M48 66 L50 79" stroke-width="0.7"/>
+          <path d="M88 36 L88 28 L96 28.4 L96 36 L104 40 L104.2 80 C97 82 87 82.4 80 80.4 L80.2 40 Z"/>
+          <path d="M87.4 28 L87.6 23 L96.6 23.2 L96.4 28.4"/>
+          <path class="accent" d="M83 50 L101 50.4 L100.8 62 L83.2 61.6 Z"/>
+          <path d="M100 66 L101.4 78 M96.4 68 L97.6 79" stroke-width="0.7"/>
+          <path d="M10 85 C40 87.4 80 86.6 112 84.6"/>
+        </svg>
+        <figcaption><span class="sc">Fig. V.</span> A row of apothecary bottles.</figcaption>
+      </figure>
+      <p class="dropcap">Part of Glyn&rsquo;s training was served inside agencies, where many clients, many deadlines and many kinds of project pass through the same hands in a single season. Agency work is a hard and useful school. It demands quick diagnosis of an unfamiliar business, an honest estimate given early, and delivery to a fixed date without loss of quality.</p>
+      <p>It also teaches the craft of working within a team: handing work cleanly between designers, developers and account managers, keeping clients informed without burying them in detail, and knowing when to raise a concern before it becomes a problem. Glyn has carried these habits into everything since, and is just as comfortable working alongside an agency's own team as working directly with a business.</p>
+      <ul class="remedies">
+        <li>Many clients and industries, at agency pace</li>
+        <li>Estimates, deadlines and delivery under pressure</li>
+        <li>Working within design and development teams</li>
+        <li>Available to agencies as a contractor</li>
+      </ul>
+    </section>
+
+    <svg class="fleuron" aria-hidden="true" focusable="false"><use href="#fleuron"/></svg>
+
+    <section class="chapter" id="materia-medica" aria-labelledby="ch6">
+      <span class="chapter-num">Chapter VI</span>
+      <h2 id="ch6"><span class="book-only">Materia Medica</span><span class="modern-only">Progressive Web Apps</span></h2>
+      <p class="argument">A catalogue of Glyn&rsquo;s progressive web applications, published as SmurfWorks, each to be installed upon the telephone and taken as required. The formulae are kept openly at <a href="https://github.com/smurfworks">github.com/smurfworks</a>.</p>
+
+      <figure class="plate centre">
+        <svg class="vignette" viewBox="0 0 120 90" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60 86 C58 66 62.4 46 58.4 26 C57.4 18 60 10 64 6"/>
+          <path d="M59.4 70 C48 66 40 58 36 50 C46 52 54 60 59.4 70"/>
+          <path d="M60 56 C70 50 78 44 84 34 C74 36 66 44 60 56"/>
+          <path d="M59 40 C50 36 44 28 42 20 C50 24 56 30 59 40"/>
+          <path d="M60.4 26 C66 22 72 16 74.4 8 C68 10 62 16 60.4 26"/>
+          <path d="M59.4 70 L40 52.4 M60 56 L80.4 37 M59 40 L44.4 22.4 M60.4 26 L72 10.4" stroke-width="0.7"/>
+          <path d="M50 61 L48 56 M45 57 L43 53 M70 47 L71.6 42 M75 43 L76.6 38.6" stroke-width="0.6"/>
+          <path class="accent" d="M65.9 2.6 Q67.0 3.2 67.6 4.4 Q67.4 5.6 66.9 6.7 Q65.9 7.3 64.7 7.7 Q63.5 7.2 62.8 6.2 Q62.3 5.0 62.6 3.7 Q63.5 2.8 64.7 2.5 Q65.9 2.6 66.9 3.3"/>
+          <path class="accent" d="M62.4 3 C61 0.8 63 -1 64.6 1 M67.4 3.4 C69.4 1.6 70.6 4 68.4 5.4" stroke-width="1"/>
+          <path d="M60 86 C56 88 52 87 47.6 89 M60 86 C64 88 68 87.6 72.4 89.6 M60 86 L61 90" stroke-width="1"/>
+        </svg>
+        <figcaption><span class="sc">Fig. VI.</span> A botanical sprig.</figcaption>
+      </figure>
+      <div class="labels">
+        <article class="label">
+          <span class="no">No. I</span>
+          <h3>Workpace</h3>
+          <p class="latin">Tinctura Temporis</p>
+          <hr class="rule">
+          <dl>
+            <dt><span class="book-only">Indications</span><span class="modern-only">What it does</span></dt>
+            <dd>Check the pace of each client's monthly hours budget against the working days of the month: how much to do each day, and how much should be done by now.</dd>
+            <dt><span class="book-only">Preparation</span><span class="modern-only">Built with</span></dt>
+            <dd>JavaScript. All data kept on the device.</dd>
+          </dl>
+          <p class="links"><a href="https://smurfworks.github.io/workpace/"><span class="book-only">Administer</span><span class="modern-only">Open app</span></a><a href="https://github.com/smurfworks/workpace"><span class="book-only">Formula</span><span class="modern-only">Source code</span></a></p>
+        </article>
+
+        <article class="label">
+          <span class="no">No. II</span>
+          <h3>Budget</h3>
+          <p class="latin">Elixir Pecuniae</p>
+          <hr class="rule">
+          <dl>
+            <dt><span class="book-only">Indications</span><span class="modern-only">What it does</span></dt>
+            <dd>Normalise recurring bills against your income, whether weekly, fortnightly, quarterly or yearly, so the true cost of things is plain to see.</dd>
+            <dt><span class="book-only">Preparation</span><span class="modern-only">Built with</span></dt>
+            <dd>JavaScript. Kept on the device, with optional reminders.</dd>
+          </dl>
+          <p class="links"><a href="https://smurfworks.github.io/budget/"><span class="book-only">Administer</span><span class="modern-only">Open app</span></a><a href="https://github.com/smurfworks/budget"><span class="book-only">Formula</span><span class="modern-only">Source code</span></a></p>
+        </article>
+
+        <article class="label">
+          <span class="no">No. III</span>
+          <h3>Worknote</h3>
+          <p class="latin">Pilulae Memoriae</p>
+          <hr class="rule">
+          <dl>
+            <dt><span class="book-only">Indications</span><span class="modern-only">What it does</span></dt>
+            <dd>Don't let timesheets creep up on you. A daily note of what you worked on, typed or dictated, with reminders and backups.</dd>
+            <dt><span class="book-only">Preparation</span><span class="modern-only">Built with</span></dt>
+            <dd>Vue 3. Notes kept in the device's own storage; no audio saved.</dd>
+          </dl>
+          <p class="links"><a href="https://smurfworks.github.io/worknote/"><span class="book-only">Administer</span><span class="modern-only">Open app</span></a><a href="https://github.com/smurfworks/worknote"><span class="book-only">Formula</span><span class="modern-only">Source code</span></a></p>
+        </article>
+
+        <article class="label">
+          <span class="no">No. IV</span>
+          <h3>Dosage</h3>
+          <p class="latin">Calculus Insulini</p>
+          <hr class="rule">
+          <dl>
+            <dt><span class="book-only">Indications</span><span class="modern-only">What it does</span></dt>
+            <dd>A personal calculator for carbohydrate and insulin doses, applying the ratios you enter, with fibre taken into account.</dd>
+            <dt><span class="book-only">Preparation</span><span class="modern-only">Built with</span></dt>
+            <dd>TypeScript. Everything stays on the device.</dd>
+          </dl>
+          <p class="caution">Caution: applies your own ratios only, and does not replace a diabetes care plan.</p>
+          <p class="links"><a href="https://smurfworks.github.io/dosage/"><span class="book-only">Administer</span><span class="modern-only">Open app</span></a><a href="https://github.com/smurfworks/dosage"><span class="book-only">Formula</span><span class="modern-only">Source code</span></a></p>
+        </article>
+
+        <article class="label">
+          <span class="no">No. V</span>
+          <h3>PWA Push</h3>
+          <p class="latin">Apparatus Nuntii</p>
+          <hr class="rule">
+          <dl>
+            <dt><span class="book-only">Indications</span><span class="modern-only">What it does</span></dt>
+            <dd>The apparatus behind the remedies: a small server that delivers persistent reminders to the phone when an installed app asks it to.</dd>
+            <dt><span class="book-only">Preparation</span><span class="modern-only">Built with</span></dt>
+            <dd>PHP. Knows only when to deliver and what to say.</dd>
+          </dl>
+          <p class="links"><a href="https://github.com/smurfworks/pwa-push"><span class="book-only">Formula</span><span class="modern-only">Source code</span></a></p>
+        </article>
+
+        <article class="label">
+          <span class="no">No. VI</span>
+          <h3>Bingos</h3>
+          <p class="latin">Sortes Armamentorum</p>
+          <hr class="rule">
+          <dl>
+            <dt><span class="book-only">Indications</span><span class="modern-only">What it does</span></dt>
+            <dd>Retires the patient from the chore of picking loadouts. Bingos makes the choice, so the user need not.</dd>
+            <dt><span class="book-only">Preparation</span><span class="modern-only">Built with</span></dt>
+            <dd>A single HTML page.</dd>
+          </dl>
+          <p class="links"><a href="https://smurfworks.github.io/bingos/"><span class="book-only">Administer</span><span class="modern-only">Open app</span></a><a href="https://github.com/smurfworks/bingos"><span class="book-only">Formula</span><span class="modern-only">Source code</span></a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page colophon">
+    <span class="finis">FINIS</span>
+    <p>Glyn Simpson &middot; SmurfWorks &middot; Independent software developer &middot; New Zealand<br>
+    Consultations by arrangement &middot; <a href="mailto:business@smurfworks.com">business@smurfworks.com</a> &middot; <a href="https://github.com/smurfworks">github.com/smurfworks</a></p>
+  </footer>
+</div>
+<script>
+  // The view toolbar: Creative (the medicine book) by default, modern when chosen or linked with #modern.
+  (function () {
+    var root = document.documentElement;
+    var bar = document.querySelector('.viewbar');
+    var buttons = bar.querySelectorAll('[data-set-view]');
+
+    function setView(view, updateHash) {
+      if (view === 'modern') root.dataset.view = 'modern';
+      else delete root.dataset.view;
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.setView === view));
+      });
+      if (updateHash) {
+        history.replaceState(null, '', view === 'modern' ? '#modern' : location.pathname + location.search);
+      }
+      document.dispatchEvent(new CustomEvent('viewchange', { detail: view }));
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setView(b.dataset.setView, true); });
+    });
+    window.addEventListener('hashchange', function () {
+      if (location.hash === '#modern') setView('modern', false);
+      else if (location.hash === '#creative') setView('creative', false);
+    });
+    setView(root.dataset.view === 'modern' ? 'modern' : 'creative', false);
+
+    window.addEventListener('load', function () {
+      setTimeout(function () { bar.classList.add('shown'); }, 400);
+    });
+  })();
+</script>
+<script>
+  // Creative view on tablet and up: one page at a time, centred, turned with buttons.
+  // On phones (and in the modern view) the page simply scrolls.
+  (function () {
+    var root = document.documentElement;
+    var leaves = Array.prototype.slice.call(
+      document.querySelectorAll('.title-page, .contents, .chapter, .colophon')
+    );
+    var wide = window.matchMedia('(min-width: 768px)');
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var current = 0;
+    var turning = false;
+
+    function name(leaf) {
+      if (leaf.classList.contains('title-page')) return 'The title page';
+      if (leaf.classList.contains('contents')) return 'Contents';
+      if (leaf.classList.contains('colophon')) return 'Finis';
+      return leaf.querySelector('.chapter-num').textContent + ': ' + leaf.querySelector('h2 .book-only').textContent;
+    }
+
+    function button(dir, target) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = dir;
+      b.innerHTML = '<span class="turn">' + (dir === 'next' ? 'Turn the page &rsaquo;' : '&lsaquo; Turn back') +
+        '</span><span class="to"></span>';
+      b.querySelector('.to').textContent = name(leaves[target]);
+      b.addEventListener('click', function () { turnTo(target); });
+      return b;
+    }
+
+    function paged() { return root.classList.contains('paged'); }
+
+    function show(i, focus) {
+      leaves[current].classList.remove('leaf-current');
+      current = i;
+      leaves[i].classList.add('leaf-current');
+      window.scrollTo(0, 0);
+      document.dispatchEvent(new CustomEvent('pageturn', { detail: leaves[i] }));
+      var heading = leaves[i].querySelector('h1, h2');
+      if (focus && heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      }
+    }
+
+    function turnTo(i) {
+      if (!paged() || turning || i === current || i < 0 || i >= leaves.length) return;
+      if (still) { show(i, true); return; }
+      turning = true;
+      var forward = i > current;
+      var out = forward ? 'slide-out-left' : 'slide-out-right';
+      var into = forward ? 'slide-in-left' : 'slide-in-right';
+      // Each page travels with its turn buttons.
+      var leaving = [leaves[current], leaves[current].nextElementSibling];
+      var arriving = [leaves[i], leaves[i].nextElementSibling];
+      leaving.forEach(function (el) { el.classList.add(out); });
+      setTimeout(function () {
+        leaving.forEach(function (el) { el.classList.remove(out); });
+        show(i, true);
+        arriving.forEach(function (el) { el.classList.add(into); });
+        setTimeout(function () {
+          arriving.forEach(function (el) { el.classList.remove(into); });
+          turning = false;
+        }, 520);
+      }, 380);
+    }
+
+    // The page a #hash points at, or -1.
+    function fromHash() {
+      var el = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+      if (!el) return -1;
+      for (var i = 0; i < leaves.length; i++) {
+        if (leaves[i] === el || leaves[i].contains(el)) return i;
+      }
+      return -1;
+    }
+
+    // The page the reader has scrolled to.
+    function inView() {
+      var found = 0;
+      leaves.forEach(function (leaf, i) {
+        if (leaf.getBoundingClientRect().top < window.innerHeight / 3) found = i;
+      });
+      return found;
+    }
+
+    function update() {
+      var want = wide.matches && root.dataset.view !== 'modern';
+      if (want === paged()) return;
+      if (want) {
+        var i = fromHash();
+        if (i < 0) i = inView();
+        root.classList.add('paged');
+        leaves[current].classList.remove('leaf-current');
+        current = i;
+        leaves[i].classList.add('leaf-current');
+        window.scrollTo(0, 0);
+      } else {
+        root.classList.remove('paged');
+        leaves[current].scrollIntoView({ block: 'start' });
+      }
+    }
+
+    leaves.forEach(function (leaf, i) {
+      leaf.classList.add('leaf');
+      var nav = document.createElement('nav');
+      nav.className = 'page-turn';
+      nav.setAttribute('aria-label', 'Turn the page');
+      if (i > 0) nav.appendChild(button('prev', i - 1));
+      if (i < leaves.length - 1) nav.appendChild(button('next', i + 1));
+      leaf.after(nav);
+    });
+
+    // Contents links and arrow keys turn to the page too.
+    window.addEventListener('hashchange', function () {
+      var i = fromHash();
+      if (i >= 0) turnTo(i);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!paged() || e.altKey || e.ctrlKey || e.metaKey) return;
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+      if (e.key === 'ArrowRight') turnTo(current + 1);
+      else if (e.key === 'ArrowLeft') turnTo(current - 1);
+    });
+
+    wide.addEventListener('change', update);
+    document.addEventListener('viewchange', update);
+    update();
+  })();
+</script>
+<script>
+  // Write each paragraph in, letter by letter, as it scrolls into view.
+  // Without JavaScript, or with reduced motion, the text simply shows.
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // The modern view shows everything at once.
+    if (document.documentElement.dataset.view === 'modern') return;
+
+    var paras = document.querySelectorAll('.title-page .being, .chapter p, .remedies li');
+    var originals = new Map();
+    var letters = new Map();
+    var queue = [];
+    var busy = false;
+    var run = 0;        // bumped to cancel writing that is under way
+    var stopped = false;
+
+    function split(p) {
+      var spans = [];
+      var skipFirst = p.classList.contains('dropcap');
+      var walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var frag = document.createDocumentFragment();
+        var run = '';
+        Array.from(node.nodeValue).forEach(function (c) {
+          if (/\s/.test(c) || (skipFirst && /\S/.test(c) && !(skipFirst = false))) {
+            run += c;
+            return;
+          }
+          if (run) { frag.appendChild(document.createTextNode(run)); run = ''; }
+          var s = document.createElement('span');
+          s.className = 'ch';
+          s.textContent = c;
+          frag.appendChild(s);
+          spans.push(s);
+        });
+        if (run) frag.appendChild(document.createTextNode(run));
+        node.parentNode.replaceChild(frag, node);
+      });
+      return spans;
+    }
+
+    function finish(p) {
+      p.innerHTML = originals.get(p);
+      p.classList.remove('writing', 'inked');
+      busy = false;
+      next();
+    }
+
+    function write(p) {
+      var spans = letters.get(p);
+      var mine = run;
+      // Roughly 14ms a letter, capped so long paragraphs take no more than 3.5s;
+      // quicker when more paragraphs are waiting their turn.
+      var total = Math.min(spans.length * 14, 3500) / (1 + queue.length);
+      var start = null, done = 0;
+      p.classList.add('inked');
+      function step(t) {
+        if (mine !== run) return;
+        if (start === null) start = t;
+        var upto = Math.min(spans.length, Math.ceil((t - start) / total * spans.length));
+        for (; done < upto; done++) spans[done].classList.add('on');
+        if (done < spans.length) requestAnimationFrame(step);
+        else setTimeout(function () { if (mine === run) finish(p); }, 450);
+      }
+      requestAnimationFrame(step);
+    }
+
+    function next() {
+      if (busy || !queue.length) return;
+      busy = true;
+      write(queue.shift());
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        observer.unobserve(e.target);
+        queue.push(e.target);
+      });
+      next();
+    }, { rootMargin: '0px 0px -12% 0px' });
+
+    paras.forEach(function (p) {
+      originals.set(p, p.innerHTML);
+      p.classList.add('writing');
+      letters.set(p, split(p));
+      observer.observe(p);
+    });
+
+    // Draw each figure in, one stroke after another.
+    document.documentElement.classList.add('drawing');
+    var drawer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        drawer.unobserve(e.target);
+        e.target.classList.add('drawn');
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('.vignette').forEach(function (svg) {
+      svg.classList.add('sketch');
+      svg.querySelectorAll('path').forEach(function (path, i) {
+        path.setAttribute('pathLength', '1');
+        path.style.transitionDelay = (i * 0.18) + 's';
+      });
+      drawer.observe(svg);
+    });
+
+    // Turning to a page writes and draws it in afresh.
+    document.addEventListener('pageturn', function (e) {
+      if (stopped) return;
+      var leaf = e.detail;
+      run++;
+      busy = false;
+      queue.length = 0;
+      originals.forEach(function (html, p) {
+        if (!leaf.contains(p)) return;
+        observer.unobserve(p);
+        p.innerHTML = html;
+        p.classList.remove('inked');
+        p.classList.add('writing');
+        letters.set(p, split(p));
+        observer.observe(p);
+      });
+      leaf.querySelectorAll('.sketch').forEach(function (svg) {
+        svg.classList.add('resetting');
+        svg.classList.remove('drawn');
+        svg.getBoundingClientRect();
+        svg.classList.remove('resetting');
+        drawer.observe(svg);
+      });
+      leaf.querySelectorAll('.emblem').forEach(function (stamp) {
+        stamp.style.animation = 'none';
+        stamp.getBoundingClientRect();
+        stamp.style.animation = '';
+      });
+    });
+
+    // Switching to the modern view finishes all writing and drawing at once.
+    document.addEventListener('viewchange', function (e) {
+      if (e.detail !== 'modern') return;
+      stopped = true;
+      run++;
+      observer.disconnect();
+      drawer.disconnect();
+      queue.length = 0;
+      originals.forEach(function (html, p) {
+        if (!p.classList.contains('writing')) return;
+        p.innerHTML = html;
+        p.classList.remove('writing', 'inked');
+      });
+      document.documentElement.classList.remove('drawing');
+    });
+  })();
+</script>
+</body>
+</html>
